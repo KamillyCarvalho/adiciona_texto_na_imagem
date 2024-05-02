@@ -22,15 +22,17 @@ tam_fonte = 12
 font = ImageFont.truetype(caminho_fonte, size=tam_fonte)
 
 # Imagem a ser modificada
-caminho_imagem = 'caminho/para/imagem/imagem.png'
+#caminho_imagem = 'caminho/para/imagem/imagem.png'
+caminho_imagem = input() #caminho para imagem que vai ser adicionado o texto (primeira linha do arquivo)
 
 # Define posicao inicial do texto
 x = 0  # coordenada x na imagem (é definida baseada no tamanho da imagem e do nome, valor 0 apenas para inicializacao)
 y = 86 # coordenada y na imagem
-cor = '#7d19b8' # cor do texto
+#cor = '#7d19b8' # cor do texto
+cor = input() # cor da fonte (segunda linha do arquivo)
 
 idx = 1 # variavel auxiliar para loop
-q = int(input()) # quantidade de nomes a serem lidos (primeira linha do arquivo)
+q = int(input()) # quantidade de nomes a serem lidos (terceira linha do arquivo)
 print(f"Executando o script para {q} nomes:\n")
 for _ in range(q):
     name = input().strip().upper()
